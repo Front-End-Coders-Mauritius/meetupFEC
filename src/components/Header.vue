@@ -17,13 +17,13 @@
       <div class="header-menu flex h-16">
         <a
           href=""
-          class="flex justify-center items-center px-8 hover:text-red-700"
+          class="flex justify-center items-center text-md px-8 hover:text-red-700"
         >
           All events
         </a>
         <a
           href=""
-          class="flex justify-center items-center px-8 hover:text-red-700"
+          class="flex justify-center items-center px-8 text-md hover:text-red-700"
           >Gallery</a
         >
       </div>
