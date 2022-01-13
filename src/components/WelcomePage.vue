@@ -3,7 +3,7 @@
   <div class="main-container bg-cover bg-center">
     <div class="main-cover bg-center bg-cover" style="height: 700px">
       <div
-        class="main-wrapper flex flex-col w-full h-full bg-gradient-to-t from-white p-8 shadow-xl"
+        class="main-wrapper flex flex-col w-full h-full bg-gradient-to-t from-white p-8"
       >
         <div
           class="main-details flex flex-col justify-center items-end gap-4 w-full h-full"
@@ -25,12 +25,21 @@
       </div>
     </div>
   </div>
+  <div
+    class="events-container flex flex-col gap-4 justify-center items-center p-8"
+  >
+    <h1 class="text-4xl font-extrabold">Latest Events</h1>
+
+    <Events />
+  </div>
 </template>
 <script>
 import Header from "./Header.vue";
+import Events from "./Events.vue";
 export default {
   components: {
     Header,
+    Events,
   },
 };
 </script>
