@@ -23,7 +23,7 @@
         <div class="text-2xl text-center font-bold text-red-900">
           Front-end Coders October Meetup 2020
         </div>
-        <div class="flex gap-2 text-md text-red-100">
+        <div class="flex gap-2 text-md text-red-200">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
