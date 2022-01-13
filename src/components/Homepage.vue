@@ -6,7 +6,7 @@
         class="main-wrapper flex flex-col w-full h-full bg-gradient-to-t from-white p-8"
       >
         <div
-          class="main-details flex flex-col justify-center items-end gap-4 w-full h-full"
+          class="main-details flex flex-col justify-end items-end gap-4 p-20 w-full h-full"
         >
           <div class="text-right">
             <h1 class="text-4xl md:text-5xl font-extrabold">
@@ -28,10 +28,7 @@
   <div class="event-container p-10 md:p-20 bg-gradient-to-t from-red-400">
     <div class="events-wrapper md:w-1/2 flex flex-col gap-4 justify-center p-8">
       <h1 class="text-5xl font-extrabold">
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-br from-red-100 to-red-600"
-          >Latest Events</span
-        >
+        <span class="text-red-600">Latest Events</span>
       </h1>
 
       <Events />

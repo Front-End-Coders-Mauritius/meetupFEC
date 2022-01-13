@@ -1,12 +1,17 @@
 <template>
   <a
     href=""
-    v-for="event in eventsList"
+    v-for="event in eventsList.slice(0, 5)"
     :key="event"
     class="events-wrapper flex flex-col gap-2 justify-center bg-white px-4 py-6 text-xl font-medium w-full rounded-lg shadow-xl"
   >
     {{ event.name }}
   </a>
+  <a
+    href=""
+    class="flex justify-center items-center text-red-700 bg-white px-4 py-6 text-2xl font-bold w-full rounded-lg shadow-xl"
+    >View all events</a
+  >
 </template>
 <script>
 export default {
