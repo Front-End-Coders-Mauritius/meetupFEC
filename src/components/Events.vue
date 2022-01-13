@@ -1,11 +1,38 @@
 <template>
   <a
     href=""
-    v-for="event in eventsList.slice(0, 5)"
+    v-for="event in eventsList.slice(0, 3)"
     :key="event"
-    class="events-wrapper flex flex-col gap-2 justify-center bg-white px-4 py-6 text-xl font-medium w-full rounded-lg shadow-xl"
+    class="events-wrapper flex flex-col gap-2 justify-between bg-white px-4 py-6 text-xl font-medium w-full rounded-lg shadow-xl"
   >
-    {{ event.name }}
+    <div class="text-md text-gray-400 font-normal">
+      SAT 09, OCTOBER 2020, 9:30 Am
+    </div>
+    <div class="text-2xl font-bold text-gray-700">
+      {{ event.name }}
+    </div>
+    <div class="flex gap-1 text-md text-gray-300">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+        /></svg
+      ><span class="font-normal">Bocasay</span>
+    </div>
   </a>
   <router-link
     to="/events"
