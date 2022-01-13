@@ -1,13 +1,13 @@
 import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
-import WelcomePage from "../src/components/WelcomePage.vue";
+import Homepage from "../src/components/Homepage.vue";
 
 const routes = [
   {
     path: "/",
     name: "index",
-    component: WelcomePage,
+    component: Homepage,
   },
 ];
 
