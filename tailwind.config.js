@@ -6,6 +6,7 @@ module.exports = {
     fontFamily: {
       Pacifico: ["Pacifico", "open-sans"],
       Mochiy: ['"Mochiy Pop P One"', "sans-serif"],
+      FiraSans: ['"Fira Sans"', "sans-serif"],
     },
     screens: {
       sm: "640px",
