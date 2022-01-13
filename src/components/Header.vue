@@ -7,7 +7,9 @@
         class="logo flex justify-center items-center text-red-700 font-bold md:px-8 px-2 text-xs md:text-2xl font-Mochiy"
       >
         Front-end Coders
-        <span class="text-xs pl-2 font-normal italic">Mauritius</span>
+        <span class="text-xs pl-1 md:pl-2 md:font-normal font-bold md:italic"
+          >Mauritius</span
+        >
       </div>
       <div class="header-menu flex h-16">
         <a
