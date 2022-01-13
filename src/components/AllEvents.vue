@@ -2,7 +2,7 @@
   <Header />
   <div class="allEvents-container py-4 mx-auto">
     <div
-      class="allEvents-header my-4 w-full h-16 flex justify-center items-center bg-gradient-to-r from-red-600"
+      class="allEvents-header my-4 w-full h-16 flex justify-center items-center bg-gradient-to-r from-red-600 rounded-md"
     >
       <h1 class="text-3xl font-extrabold font-FiraSans px-4 py-2 text-red-900">
         All Events 2020
@@ -16,7 +16,7 @@
         class="h-64 w-72 flex flex-col justify-between items-center px-4 py-8 rounded-lg shadow-xl"
       >
         <div
-          class="text-md text-red-500 font-bold bg-gradient-to-r from-red-200 p-2"
+          class="text-md text-red-500 font-bold bg-gradient-to-r from-red-200 p-2 rounded-md"
         >
           SAT 09, OCTOBER 2020, 9:30 Am
         </div>
