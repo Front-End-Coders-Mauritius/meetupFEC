@@ -3,14 +3,15 @@
     <div
       class="header-wrapper w-full h-16 flex justify-between items-center px-2"
     >
-      <div
+      <router-link
+        to="/"
         class="logo flex justify-center items-center text-red-600 font-bold md:px-8 px-2 text-xs md:text-2xl font-Mochiy"
       >
         Front-end Coders
         <span class="text-xs pl-1 md:pl-2 md:font-normal font-bold md:italic"
           >Mauritius</span
         >
-      </div>
+      </router-link>
       <div class="header-menu flex h-16">
         <a
           href=""
