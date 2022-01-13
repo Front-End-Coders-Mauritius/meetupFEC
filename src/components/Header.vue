@@ -1,8 +1,10 @@
 <template>
   <div class="header-container">
-    <div class="header-wrapper w-full h-16 flex justify-between items-center">
+    <div
+      class="header-wrapper w-full h-16 flex justify-between items-center px-2"
+    >
       <div
-        class="logo flex justify-center items-center text-red-700 font-bold md:px-8 px-4 text-xs md:text-2xl font-Mochiy"
+        class="logo flex justify-center items-center text-red-700 font-bold md:px-8 px-2 text-xs md:text-2xl font-Mochiy"
       >
         Front-end Coders
         <span class="md:text-xs md:block hidden pl-2 font-normal"
