@@ -7,10 +7,10 @@
   >
     {{ event.name }}
   </a>
-  <a
-    href=""
+  <router-link
+    to="/events"
     class="flex justify-center items-center text-red-700 bg-white px-4 py-6 text-2xl font-bold w-full rounded-lg shadow-xl"
-    >View all events</a
+    >View all events</router-link
   >
 </template>
 <script>
