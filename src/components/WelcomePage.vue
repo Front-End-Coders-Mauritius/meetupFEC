@@ -28,6 +28,6 @@ export default {
 </script>
 <style scoped>
 .main-cover {
-  background-image: url("../assets/cover.jpeg");
+  background-image: url("../assets/websiteCover.jpeg");
 }
 </style>
