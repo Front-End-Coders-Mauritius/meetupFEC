@@ -30,7 +30,9 @@
   <div class="event-container p-10 md:p-20">
     <div class="events-wrapper md:w-1/2 flex flex-col gap-4 justify-center p-8">
       <h1 class="text-5xl font-extrabold">
-        <span class="text-red-600 font-FiraSans">Latest Events</span>
+        <span class="text-black font-FiraSans bg-gradient-to-r from-red-500 p-2"
+          >Latest Events</span
+        >
       </h1>
 
       <Events />
