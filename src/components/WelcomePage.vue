@@ -1,7 +1,7 @@
 <template>
   <Header />
-  <div class="main-container bg-cover bg-center">
-    <div class="main-cover bg-center bg-cover" style="height: 700px">
+  <div class="main-container bg-cover bg-center h-screen">
+    <div class="main-cover bg-center bg-cover h-screen">
       <div
         class="main-wrapper flex flex-col w-full h-full bg-gradient-to-t from-white p-8"
       >
@@ -25,12 +25,17 @@
       </div>
     </div>
   </div>
-  <div
-    class="events-container flex flex-col gap-4 justify-center items-center p-8"
-  >
-    <h1 class="text-4xl font-extrabold">Latest Events</h1>
+  <div class="event-container p-10 md:p-20 bg-gradient-to-t from-red-400">
+    <div class="events-wrapper md:w-1/2 flex flex-col gap-4 justify-center p-8">
+      <h1 class="text-5xl font-extrabold">
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-br from-red-100 to-red-600"
+          >Latest Events</span
+        >
+      </h1>
 
-    <Events />
+      <Events />
+    </div>
   </div>
 </template>
 <script>
