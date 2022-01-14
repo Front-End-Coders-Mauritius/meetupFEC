@@ -92,7 +92,7 @@
             </div>
 
             <div class="md:flex md:space-x-10">
-              <a href=""> All Events </a>
+              <router-link to="/events"> All Events </router-link>
             </div>
           </nav>
         </div>
@@ -116,12 +116,12 @@
           </p>
           <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
             <div class="rounded-md shadow">
-              <a
-                href="#"
+              <router-link
+                to="/events"
                 class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
               >
                 All events
-              </a>
+              </router-link>
             </div>
             <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
               <a
@@ -149,7 +149,7 @@
         class="rounded-lg bg-gray-200 overflow-hidden shadow-xl divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
       >
         <div
-          v-for="(event, eventIdx) in events"
+          v-for="(event, eventIdx) in events.slice(0, 6)"
           :key="event.title"
           :class="[
             eventIdx === 0
