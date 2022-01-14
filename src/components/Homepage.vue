@@ -204,6 +204,14 @@
           </span>
         </div>
       </div>
+      <div class="rounded-md shadow my-4">
+        <router-link
+          to="/events"
+          class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+        >
+          View all events
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
