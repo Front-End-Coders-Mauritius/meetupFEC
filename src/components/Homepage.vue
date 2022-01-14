@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="banner-container relative overflow-hidden">
+  <div class="banner-container relative bg-gray-50 overflow-hidden">
     <div
       class="hidden sm:block sm:absolute sm:inset-y-0 max-h-7xl sm:h-full sm:w-full"
       aria-hidden="true"
@@ -143,7 +143,7 @@
       <div
         class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl py-8"
       >
-        <h1 class="">Latest events</h1>
+        <h1 class="text-center">Latest events</h1>
       </div>
       <div
         class="rounded-lg bg-gray-200 overflow-hidden shadow-xl divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
