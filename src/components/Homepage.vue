@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="banner-container relative bg-red-50 overflow-hidden">
+  <div class="banner-container relative overflow-hidden">
     <div
       class="hidden sm:block sm:absolute sm:inset-y-0 max-h-7xl sm:h-full sm:w-full"
       aria-hidden="true"
