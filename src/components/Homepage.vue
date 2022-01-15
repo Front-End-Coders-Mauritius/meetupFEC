@@ -161,6 +161,7 @@ import {
   UsersIcon,
 } from "@heroicons/vue/outline";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
+import eventsList from "../../eventsList.json";
 
 const features = [
   {
@@ -334,7 +335,7 @@ export default {
       resources,
       recentPosts,
       events,
-      eventsList: [],
+      eventsList: eventsList,
     };
   },
 

@@ -131,6 +131,8 @@ import {
   LocationMarkerIcon,
   UsersIcon,
 } from "@heroicons/vue/solid";
+import eventsList from "../../eventsList.json";
+
 const positions = [
   {
     id: 1,
@@ -171,18 +173,18 @@ export default {
   data: () => {
     return {
       positions,
-      eventsList: [],
+      eventsList: eventsList,
     };
   },
 
-  mounted() {
-    fetch("../../../eventsList.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        this.eventsList = data;
-      });
-  },
+  // mounted() {
+  //   fetch("../../../eventsList.json")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       this.eventsList = data;
+  //     });
+  // },
 };
 </script>
 <style scoped>
