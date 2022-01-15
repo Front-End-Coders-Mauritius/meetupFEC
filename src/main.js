@@ -2,14 +2,13 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
 import Homepage from "../src/components/Homepage.vue";
-import NewHomepage from "../src/components/NewHomepage.vue";
 import AllEvents from "../src/components/AllEvents.vue";
 
 const routes = [
   {
     path: "/",
     name: "index",
-    component: NewHomepage,
+    component: Homepage,
   },
   {
     path: "/events",
