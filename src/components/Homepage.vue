@@ -327,13 +327,14 @@ export default {
     MenuIcon,
     XIcon,
   },
-  setup() {
+  data: () => {
     return {
       features,
       callsToAction,
       resources,
       recentPosts,
       events,
+      eventsList: [],
     };
   },
 
@@ -342,6 +343,7 @@ export default {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        this.eventsList = data;
       });
   },
 };
