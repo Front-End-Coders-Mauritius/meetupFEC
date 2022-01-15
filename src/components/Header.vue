@@ -1,30 +1,29 @@
 <template>
-  <div class="header-container">
-    <div
-      class="header-wrapper w-full h-16 flex justify-between items-center px-2"
-    >
-      <router-link
-        to="/"
-        class="logo flex justify-center items-center text-red-600 font-bold md:px-8 px-2 text-xs md:text-2xl font-Mochiy"
+  <nav class="relative shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div
+        class="flex justify-between items-center py-6 md:justify-start md:space-x-10"
       >
-        Front-end Coders
-        <span class="text-xs pl-1 md:pl-2 md:font-normal font-bold md:italic"
-          >Mauritius</span
-        >
-      </router-link>
-      <div class="header-menu flex h-16">
-        <a
-          href=""
-          class="flex justify-center items-center md:px-8 px-2 text-sm md:text-lg font-normal hover:text-red-700"
-        >
-          All events
-        </a>
-        <a
-          href=""
-          class="flex justify-center items-center md:px-8 px-2 text-sm md:text-lg font-normal hover:text-red-700"
-          >Gallery</a
-        >
+        <div class="logo-image flex justify-start lg:w-0 lg:flex-1">
+          <router-link to="/">
+            <span class="sr-only">Workflow</span>
+            <img
+              class="h-8 w-auto sm:h-10"
+              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+              alt=""
+            />
+          </router-link>
+        </div>
+
+        <div class="md:flex items-center justify-end md:flex-1 lg:w-0">
+          <router-link
+            to="/events"
+            class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+          >
+            All events
+          </router-link>
+        </div>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
