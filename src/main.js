@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
 import Homepage from "../src/components/Homepage.vue";
 import AllEvents from "../src/components/AllEvents.vue";
+import Event from "../src/components/Event.vue";
 
 const routes = [
   {
@@ -12,8 +13,14 @@ const routes = [
   },
   {
     path: "/events",
-    name: "events",
     component: AllEvents,
+    children: [
+      {
+        path: ":eventIndex",
+        name: "singleEvent",
+        component: Event,
+      },
+    ],
   },
 ];
 

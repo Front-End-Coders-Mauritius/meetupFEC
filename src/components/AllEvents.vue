@@ -10,14 +10,20 @@
     </div>
     <div class="bg-white shadow-2xl overflow-hidden sm:rounded-md my-4">
       <ul role="list" class="divide-y divide-gray-200">
-        <li v-for="(event, index) in eventsList" :key="index" :value="event">
-          <a href="#" class="block hover:bg-gray-50">
+        <li v-for="(event, index) in eventsList" :key="event" :value="event">
+          <router-link
+            :to="{
+              name: 'singleEvent',
+              params: { eventIndex: index },
+            }"
+            class="block hover:bg-gray-50"
+          >
             <div class="flex flex-col gap-4 px-4 py-8 sm:px-6">
               <div class="flex items-center justify-between">
                 <p
                   class="event-name text-sm md:text-lg font-medium text-indigo-600 truncate"
                 >
-                  {{ event.name }}
+                  {{ event.name }} - {{ index }}
                 </p>
                 <div class="event-tags ml-2 flex-shrink-0 flex">
                   <p
@@ -70,14 +76,16 @@
                 </div>
               </div>
             </div>
-          </a>
+          </router-link>
         </li>
       </ul>
     </div>
   </div>
+  <router-view />
 </template>
 <script>
 import Header from "./Header.vue";
+
 import {
   CalendarIcon,
   LocationMarkerIcon,
@@ -126,23 +134,17 @@ export default {
     return {
       positions,
       eventsListJson,
+      eventDetails: "",
     };
   },
 
   computed: {
     eventsList() {
-      console.log("COMPUUUUUUUUTED");
       if (this.eventsListJson.length === 0) {
         return [];
       }
       return this.eventsListJson;
     },
-  },
-  beforeMount() {
-    console.log("beforemout", this.eventsListJson);
-  },
-  mounted() {
-    console.log("mounted", this.eventsListJson);
   },
 };
 </script>
