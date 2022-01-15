@@ -1,10 +1,13 @@
 <template>
   <Header />
 
-  <div class="events-container max-w-sm lg:max-w-7xl md:max-w-3xl mx-auto">
-    <h1 class="text-4xl font-extrabold text-center py-8 text-gray-700">
-      All events
-    </h1>
+  <div class="events-container max-w-sm lg:max-w-7xl md:max-w-2xl mx-auto">
+    <div class="events-heading flex flex-col gap-4 py-8">
+      <h1 class="text-4xl font-extrabold text-center text-gray-700">
+        All events
+      </h1>
+      <p class="text-center text-2xl text-gray-400">A list of all events</p>
+    </div>
     <div class="bg-white shadow-2xl overflow-hidden sm:rounded-md my-4">
       <ul role="list" class="divide-y divide-gray-200">
         <li v-for="(event, index) in eventsList" :key="index" :value="event">
@@ -16,11 +19,16 @@
                 >
                   {{ event.name }}
                 </p>
-                <div class="ml-2 flex-shrink-0 flex">
+                <div class="event-tags ml-2 flex-shrink-0 flex">
                   <p
-                    class="event-tag px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                    class="event-status mr-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
                   >
-                    {{ event.type }}hi
+                    {{ event.status }}
+                  </p>
+                  <p
+                    class="event-year px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                  >
+                    {{ event.local_date.slice(0, 4) }}
                   </p>
                 </div>
               </div>
@@ -54,10 +62,10 @@
                     aria-hidden="true"
                   />
                   <p>
-                    {{ event.local_date }}
-                    <time :datetime="event.closeDate">{{
+                    {{ new Date(event.local_date).toDateString() }}
+                    <!-- <time :datetime="event.closeDate">{{
                       event.closeDateFull
-                    }}</time>
+                    }}</time> -->
                   </p>
                 </div>
               </div>
@@ -67,62 +75,6 @@
       </ul>
     </div>
   </div>
-
-  <div class="template-event bg-white shadow overflow-hidden sm:rounded-md">
-    <ul role="list" class="divide-y divide-gray-200">
-      <li v-for="position in positions" :key="position.id">
-        <a href="#" class="block hover:bg-gray-50">
-          <div class="px-4 py-4 sm:px-6">
-            <div class="flex items-center justify-between">
-              <p class="text-sm font-medium text-indigo-600 truncate">
-                {{ position.title }}
-              </p>
-              <div class="ml-2 flex-shrink-0 flex">
-                <p
-                  class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
-                >
-                  {{ position.type }}
-                </p>
-              </div>
-            </div>
-            <div class="mt-2 sm:flex sm:justify-between">
-              <div class="sm:flex">
-                <p class="flex items-center text-sm text-gray-500">
-                  <UsersIcon
-                    class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
-                    aria-hidden="true"
-                  />
-                  {{ position.department }}
-                </p>
-                <p
-                  class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6"
-                >
-                  <LocationMarkerIcon
-                    class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
-                    aria-hidden="true"
-                  />
-                  {{ position.location }}
-                </p>
-              </div>
-              <div class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
-                <CalendarIcon
-                  class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-                <p>
-                  Closing on
-                  {{ " " }}
-                  <time :datetime="position.closeDate">{{
-                    position.closeDateFull
-                  }}</time>
-                </p>
-              </div>
-            </div>
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
 </template>
 <script>
 import Header from "./Header.vue";
@@ -131,7 +83,7 @@ import {
   LocationMarkerIcon,
   UsersIcon,
 } from "@heroicons/vue/solid";
-import eventsList from "../../eventsList.json";
+import eventsListJson from "../../eventsList.json";
 
 const positions = [
   {
@@ -173,8 +125,24 @@ export default {
   data: () => {
     return {
       positions,
-      eventsList: eventsList,
+      eventsListJson,
     };
+  },
+
+  computed: {
+    eventsList() {
+      console.log("COMPUUUUUUUUTED");
+      if (this.eventsListJson.length === 0) {
+        return [];
+      }
+      return this.eventsListJson;
+    },
+  },
+  beforeMount() {
+    console.log("beforemout", this.eventsListJson);
+  },
+  mounted() {
+    console.log("mounted", this.eventsListJson);
   },
 };
 </script>
