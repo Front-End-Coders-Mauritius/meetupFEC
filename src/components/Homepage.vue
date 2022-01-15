@@ -338,14 +338,5 @@ export default {
       eventsList: eventsList,
     };
   },
-
-  mounted() {
-    fetch("../../../eventsList.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        this.eventsList = data;
-      });
-  },
 };
 </script>
