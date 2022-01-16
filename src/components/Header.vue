@@ -2,7 +2,7 @@
   <nav class="relative shadow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
-        class="flex justify-between items-center py-6 md:justify-start md:space-x-10"
+        class="flex justify-between items-center py-7 md:justify-start md:space-x-10"
       >
         <div class="logo-image flex justify-start lg:w-0 lg:flex-1">
           <router-link to="/">

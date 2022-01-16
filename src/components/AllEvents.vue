@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div>
     <TransitionRoot as="template" :show="sidebarOpen">
       <Dialog
@@ -133,15 +134,15 @@
     </TransitionRoot>
 
     <!-- Static sidebar for desktop -->
-    <div class="hidden w-96 md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
+    <div
+      class="hidden w-96 md:flex md:mt-24 md:w-64 md:flex-col md:fixed md:inset-y-0"
+    >
       <!-- Sidebar component, swap this element with another sidebar if you like -->
-      <div
-        class="flex-1 flex w-96 flex-col min-h-0 border-r border-gray-200 bg-white"
-      >
-        <div class="flex-1 flex flex-col pb-4 w-96 overflow-y-auto">
+      <div class="flex-1 flex w-96 flex-col min-h-0 bg-white">
+        <div class="flex-1 flex flex-col pb-4 w-96 overflow-y-auto bg-gray-100">
           <router
             to="/"
-            class="flex-shrink-0 flex justify-center items-center px-4 text-3xl font-medium text-gray-800 border-b-2 border-gray-420 py-4"
+            class="flex-shrink-0 flex justify-center items-center px-4 text-3xl font-medium text-gray-800 py-4"
           >
             All events list
           </router>
@@ -221,15 +222,17 @@
       >
         <button
           type="button"
-          class="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+          class="w-48 px-4 h-12 inline-flex items-center justify-start rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
           @click="sidebarOpen = true"
         >
           <span class="sr-only">Open sidebar</span>
           <MenuIcon class="h-6 w-6" aria-hidden="true" />
+          <span class="text-7xl ml-2">Select Events</span>
         </button>
       </div>
-      <div class="" v-if="loader">Select an Event</div>
-      <main class="flex-1" v-else>
+      <div class="flex-1" v-if="loader">Select an Event</div>
+      <divv v-else></divv>
+      <main class="flex-1">
         <router-view />
       </main>
     </div>
@@ -320,14 +323,12 @@ export default {
       eventDetails: "",
       navigation,
       sidebarOpen,
-      loader: false,
+      loader: true,
     };
   },
 
   computed: {
     eventsList() {
-      this.loader = true;
-
       if (this.eventsListJson.length === 0) {
         return [];
       }
@@ -336,6 +337,9 @@ export default {
   },
 
   mounted() {
+    this.loader = true;
+  },
+  updated() {
     this.loader = false;
   },
 };

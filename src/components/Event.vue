@@ -1,5 +1,4 @@
 <template>
-  <router-view />
   <div class="py-16 sm:py-24">
     <div class="lg:mx-auto lg:max-w-7xl lg:px-4 lg:gap-">
       <div class="relative sm:py-16 lg:py-0">
@@ -215,6 +214,7 @@ export default {
   updated() {
     this.eventsList;
     this.eventDetails;
+    this.updated = false;
   },
 };
 </script>
