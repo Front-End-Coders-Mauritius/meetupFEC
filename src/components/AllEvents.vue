@@ -104,9 +104,7 @@
                               {{ event.venue.address_1 }}
                             </p>
                           </div>
-                          <div
-                            class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0"
-                          >
+                          <div class="flex items-center text-gray-500 mt-0">
                             <CalendarIcon
                               class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
                               aria-hidden="true"
@@ -194,9 +192,7 @@
                           {{ event.venue.address_1 }}
                         </p>
                       </div>
-                      <div
-                        class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0"
-                      >
+                      <div class="flex items-center text-sm text-gray-500 h-5">
                         <CalendarIcon
                           class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
                           aria-hidden="true"
