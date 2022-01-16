@@ -47,15 +47,14 @@
                 </button>
               </div>
             </TransitionChild>
-            <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
-              <router to="/" class="flex-shrink-0 flex items-center px-4">
-                <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-                  alt="Workflow"
-                />
+            <div class="flex-1 h-0 pb-4 overflow-y-auto">
+              <router
+                to="/"
+                class="flex-shrink-0 flex justify-center items-center px-4 text-3xl font-medium text-gray-800 border-b-2 border-gray-420 py-4"
+              >
+                All events list
               </router>
-              <nav class="mt-5 px-2 space-y-1">
+              <nav class="px-2">
                 <ul role="list" class="divide-y divide-gray-200">
                   <li
                     v-for="(event, index) in eventsList"
@@ -74,7 +73,7 @@
                           <p
                             class="event-name text-sm md:text-lg font-medium text-indigo-600 truncate"
                           >
-                            {{ event.name }} - {{ index }}
+                            {{ event.name }}
                           </p>
                           <div class="event-tags ml-2 flex-shrink-0 flex">
                             <p
@@ -98,10 +97,12 @@
                               class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6"
                             >
                               <LocationMarkerIcon
-                                class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                                class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 truncate"
                                 aria-hidden="true"
                               />
-                              {{ event.venue.address_1 }}
+                              <span class="truncate w-48">{{
+                                event.venue.address_1
+                              }}</span>
                             </p>
                           </div>
                           <div class="flex items-center text-gray-500 mt-0">
@@ -137,15 +138,14 @@
       <div
         class="flex-1 flex w-96 flex-col min-h-0 border-r border-gray-200 bg-white"
       >
-        <div class="flex-1 flex flex-col pt-5 pb-4 w-96 overflow-y-auto">
-          <router-link to="/" class="flex items-center flex-shrink-0 px-4 w-96">
-            <img
-              class="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-              alt="Workflow"
-            />
-          </router-link>
-          <nav class="mt-5 flex-1 px-2 bg-white space-y-1">
+        <div class="flex-1 flex flex-col pb-4 w-96 overflow-y-auto">
+          <router
+            to="/"
+            class="flex-shrink-0 flex justify-center items-center px-4 text-3xl font-medium text-gray-800 border-b-2 border-gray-420 py-4"
+          >
+            All events list
+          </router>
+          <nav class="flex-1 px-2 bg-white space-y-1">
             <ul role="list" class="divide-y divide-gray-200">
               <li
                 v-for="(event, index) in eventsList"
@@ -160,9 +160,9 @@
                   class="block hover:bg-gray-50"
                 >
                   <div class="flex flex-col gap-4 px-4 py-8 sm:px-6">
-                    <div class="flex items-center justify-between">
+                    <div class="flex flex-col-reverse items-end">
                       <p
-                        class="event-name text-sm md:text-lg font-medium text-indigo-600 truncate"
+                        class="event-name text-sm md:text-lg font-medium text-indigo-600 line-clamp-2"
                       >
                         {{ event.name }} - {{ index }}
                       </p>
@@ -182,14 +182,16 @@
                     <p class="text-gray-400 line-clamp-2">
                       {{ event.description.replace(/<\/?[^>]+>/gi, "") }}
                     </p>
-                    <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-2">
                       <div class="flex flex-col gap-4">
                         <p class="flex items-center text-sm text-gray-500 mt-0">
                           <LocationMarkerIcon
-                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
+                            class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 truncate"
                             aria-hidden="true"
                           />
-                          {{ event.venue.address_1 }}
+                          <span class="truncate">{{
+                            event.venue.address_1
+                          }}</span>
                         </p>
                       </div>
                       <div class="flex items-center text-sm text-gray-500 h-5">
@@ -226,8 +228,8 @@
           <MenuIcon class="h-6 w-6" aria-hidden="true" />
         </button>
       </div>
-
-      <main class="flex-1">
+      <div class="" v-if="loader">Select an Event</div>
+      <main class="flex-1" v-else>
         <router-view />
       </main>
     </div>
@@ -318,16 +320,23 @@ export default {
       eventDetails: "",
       navigation,
       sidebarOpen,
+      loader: false,
     };
   },
 
   computed: {
     eventsList() {
+      this.loader = true;
+
       if (this.eventsListJson.length === 0) {
         return [];
       }
       return this.eventsListJson;
     },
+  },
+
+  mounted() {
+    this.loader = false;
   },
 };
 </script>

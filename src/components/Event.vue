@@ -1,9 +1,7 @@
 <template>
   <router-view />
-  <div class="bg-white py-16 sm:py-24">
-    <div
-      class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start"
-    >
+  <div class="py-16 sm:py-24">
+    <div class="lg:mx-auto lg:max-w-7xl lg:px-4 lg:gap-">
       <div class="relative sm:py-16 lg:py-0">
         <div
           aria-hidden="true"
@@ -45,27 +43,15 @@
             />
           </svg>
         </div>
-        <div
-          class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20"
-        >
-          <!-- Testimonial card-->
-          <div
-            class="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden"
-          >
-            <img
-              class="absolute inset-0 h-full w-full object-cover"
-              src="https://images.unsplash.com/photo-1521510895919-46920266ddb3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&fp-x=0.5&fp-y=0.6&fp-z=3&width=1440&height=1440&sat=-100"
-              alt=""
-            />
-          </div>
-        </div>
       </div>
 
-      <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
+      <div
+        class="mx-auto md:mx-0 relative max-w-md sm:max-w-3xl sm:px-6 px-8 px-8"
+      >
         <!-- Content area -->
-        <div class="pt-12 sm:pt-16 lg:pt-20">
+        <div class="">
           <h2
-            class="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl"
+            class="text-4xl lg:text-5xl text-gray-900 font-extrabold tracking-tight"
           >
             {{ eventDetails.name }}
           </h2>
@@ -107,8 +93,7 @@
         </div>
       </div>
     </div>
-    <div class="images lg:mx-auto lg:max-w-7xl lg:px-8 ms:mt-4 mt-16">
-      <img :src="eventDetails.images" alt="" />
+    <div class="images lg:mx-auto lg:max-w-7xl ms:mt-4 mt-16 px-4">
       <ul
         role="list"
         class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
