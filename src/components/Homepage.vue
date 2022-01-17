@@ -27,7 +27,7 @@
               month at announced date and place. Feel free to join!
             </p>
             <div
-              class="mt-10 md:flex justify-start gap-4 w-72 mx-auto md:w-auto lg:mx-o"
+              class="mt-10 md:flex justify-start md:justify-center lg:justify-start gap-4 w-72 mx-auto md:w-auto lg:mx-o"
             >
               <div class="rounded-md shadow">
                 <router-link
