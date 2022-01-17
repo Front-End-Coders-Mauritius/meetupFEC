@@ -12,15 +12,15 @@
         class="rounded-lg bg-gray-200 overflow-hidden shadow-xl divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
       >
         <div
-          v-for="(event, eventIdx) in eventsList"
+          v-for="(event, eventIdx) in sortedEventList"
           :key="event.title"
           :class="[
             eventIdx === 0
               ? 'rounded-tl-lg rounded-tr-lg sm:rounded-tr-none'
               : '',
             eventIdx === 1 ? 'sm:rounded-tr-lg' : '',
-            eventIdx === eventsList.length - 2 ? 'sm:rounded-bl-lg' : '',
-            eventIdx === eventsList.length - 1
+            eventIdx === sortedEventList.length - 2 ? 'sm:rounded-bl-lg' : '',
+            eventIdx === sortedEventList.length - 1
               ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none'
               : '',
             'relative group bg-white p-6',
@@ -83,19 +83,24 @@ export default {
 
   computed: {
     eventsList() {
+      console.log("computed eventlist");
       if (this.eventsListJson.length === 0) {
         return [];
       }
-      return this.eventsListJson.reverse();
+      return this.eventsListJson;
+    },
+
+    sortedEventList() {
+      const sortedList = this.eventsList.sort((a, b) => {
+        return new Date(b.local_date) - new Date(a.local_date);
+      });
+      return sortedList;
     },
   },
   data: () => {
     return {
       eventsListJson,
     };
-  },
-  mounted() {
-    this.eventsList;
   },
 };
 </script>
