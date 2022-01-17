@@ -196,9 +196,6 @@
                         />
                         <p>
                           {{ new Date(event.local_date).toDateString() }}
-                          <!-- <time :datetime="event.closeDate">{{
-                      event.closeDateFull
-                    }}</time> -->
                         </p>
                       </div>
                     </div>
@@ -243,60 +240,12 @@ import {
   TransitionChild,
   TransitionRoot,
 } from "@headlessui/vue";
-import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
-  MenuIcon,
-  UsersIcon,
-  XIcon,
-} from "@heroicons/vue/outline";
+import { CalendarIcon, MenuIcon, XIcon } from "@heroicons/vue/outline";
 
-const positions = [
-  {
-    id: 1,
-    title: "Back End Developer",
-    type: "Full-time",
-    location: "Remote",
-    department: "Engineering",
-    closeDate: "2020-01-07",
-    closeDateFull: "January 7, 2020",
-  },
-  {
-    id: 2,
-    title: "Front End Developer",
-    type: "Full-time",
-    location: "Remote",
-    department: "Engineering",
-    closeDate: "2020-01-07",
-    closeDateFull: "January 7, 2020",
-  },
-  {
-    id: 3,
-    title: "User Interface Designer",
-    type: "Full-time",
-    location: "Remote",
-    department: "Design",
-    closeDate: "2020-01-14",
-    closeDateFull: "January 14, 2020",
-  },
-];
-
-const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Team", href: "#", icon: UsersIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderIcon, current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Documents", href: "#", icon: InboxIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartBarIcon, current: false },
-];
 export default {
   components: {
     CalendarIcon,
     LocationMarkerIcon,
-    UsersIcon,
     Dialog,
     DialogOverlay,
     TransitionChild,
@@ -309,10 +258,8 @@ export default {
     const sidebarOpen = ref(false);
 
     return {
-      positions,
       eventsListJson,
       eventDetails: "",
-      navigation,
       sidebarOpen,
       loader: true,
     };
@@ -323,13 +270,14 @@ export default {
       if (this.eventsListJson.length === 0) {
         return [];
       }
-      return this.eventsListJson;
+      return this.eventsListJson.reverse();
     },
   },
 
   mounted() {
     this.loader = true;
   },
+
   updated() {
     this.loader = false;
   },

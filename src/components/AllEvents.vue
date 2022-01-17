@@ -86,13 +86,16 @@ export default {
       if (this.eventsListJson.length === 0) {
         return [];
       }
-      return this.eventsListJson;
+      return this.eventsListJson.reverse();
     },
   },
   data: () => {
     return {
       eventsListJson,
     };
+  },
+  mounted() {
+    this.eventsList;
   },
 };
 </script>

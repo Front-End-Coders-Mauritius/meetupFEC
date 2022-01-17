@@ -12,7 +12,10 @@
             >
               <span class="block xl:inline">Front-End Coders</span>
               {{ " " }}
-              <span class="block text-indigo-600 xl:inline">Mauritius</span>
+              <span
+                class="block text-indigo-600 xl:inline text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-blue-500 to-yellow-600"
+                >Mauritius</span
+              >
             </h1>
             <p
               class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl"
@@ -22,7 +25,7 @@
               month at announced date and place. Feel free to join!
             </p>
             <div
-              class="mt-10 sm:flex justify-start gap-4 w-72 mx-auto md:w-auto lg:mx-o"
+              class="mt-10 md:flex justify-start gap-4 w-72 mx-auto md:w-auto lg:mx-o"
             >
               <div class="rounded-md shadow">
                 <router-link
@@ -32,7 +35,7 @@
                   View Events
                 </router-link>
               </div>
-              <div class="rounded-md shadow">
+              <div class="rounded-md shadow mt-4 md:mt-0">
                 <router-link
                   to="/dashboard"
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"

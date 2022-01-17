@@ -1,6 +1,6 @@
 <template>
   <div class="py-4 md:py-16">
-    <div class="lg:mx-auto lg:max-w-7xl lg:px-4 lg:gap-">
+    <div class="lg:mx-auto lg:max-w-7xl lg:px-4">
       <div class="relative">
         <div
           aria-hidden="true"
@@ -69,9 +69,9 @@
               </dd>
             </div>
             <div class="border-t-2 border-gray-100 pt-6">
-              <dt class="text-base font-medium text-gray-500">Location</dt>
+              <dt class="text-base font-medium text-gray-500">Venue</dt>
               <dd class="text-3xl font-extrabold tracking-tight text-gray-900">
-                {{ eventDetails.venue.city }}
+                {{ eventDetails.venue.name }}
               </dd>
             </div>
             <div class="border-t-2 border-gray-100 pt-6">
@@ -84,6 +84,12 @@
               <dt class="text-base font-medium text-gray-500">Time</dt>
               <dd class="text-3xl font-extrabold tracking-tight text-gray-900">
                 {{ eventDetails.local_time }}
+              </dd>
+            </div>
+            <div class="border-t-2 border-gray-100 pt-6">
+              <dt class="text-base font-medium text-gray-500">Location</dt>
+              <dd class="text-3xl font-extrabold tracking-tight text-gray-900">
+                {{ eventDetails.venue.loca }}
               </dd>
             </div>
           </dl>
@@ -104,20 +110,7 @@
               alt=""
               class="object-cover pointer-events-none group-hover:opacity-75"
             />
-            <button type="button" class="absolute inset-0 focus:outline-none">
-              <span class="sr-only">View details for {{ file.title }}</span>
-            </button>
           </div>
-          <p
-            class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none"
-          >
-            {{ file.title }}
-          </p>
-          <p
-            class="block text-sm font-medium text-gray-500 pointer-events-none"
-          >
-            {{ file.size }}
-          </p>
         </li>
       </ul>
     </div>
@@ -203,11 +196,6 @@ export default {
       });
       return filtered[0];
     },
-  },
-
-  mounted() {
-    this.eventsList;
-    this.eventDetails;
   },
   updated() {
     this.eventsList;
