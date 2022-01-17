@@ -71,7 +71,7 @@
 <script>
 import { MenuIcon, XIcon, ClockIcon } from "@heroicons/vue/outline";
 import { ChevronDownIcon } from "@heroicons/vue/solid";
-import eventsList from "../../myEventArray.json";
+import eventsListJson from "../../myEventArray.json";
 
 export default {
   components: {
@@ -80,9 +80,18 @@ export default {
     MenuIcon,
     XIcon,
   },
+
+  computed: {
+    eventsList() {
+      if (this.eventsListJson.length === 0) {
+        return [];
+      }
+      return this.eventsListJson;
+    },
+  },
   data: () => {
     return {
-      eventsList: eventsList,
+      eventsListJson,
     };
   },
 };
