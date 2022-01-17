@@ -189,9 +189,7 @@ export default {
     eventID() {
       return this.$route.params.id;
     },
-    eventIndex() {
-      return this.$route.params.id;
-    },
+
     eventsList() {
       if (this.eventsListJson.length === 0) {
         return [];
@@ -205,22 +203,11 @@ export default {
       });
       return filtered[0];
     },
-    eventDetailss() {
-      if (this.eventsList.length === 0) {
-        return [];
-      }
-
-      return this.eventsList[0];
-    },
   },
 
   mounted() {
     this.eventsList;
     this.eventDetails;
-    console.log(this.eventsList);
-    console.log("this.eventDetail - ", this.eventDetails);
-    console.log("this.eventID - ", this.eventID);
-    console.log("this.testGetIdDetails - ", this.testGetIdDetails);
   },
   updated() {
     this.eventsList;

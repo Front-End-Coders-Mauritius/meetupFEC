@@ -12,7 +12,7 @@
         class="rounded-lg bg-gray-200 overflow-hidden shadow-xl divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
       >
         <div
-          v-for="(event, eventIdx) in eventsList.reverse()"
+          v-for="(event, eventIdx) in eventsList"
           :key="event.title"
           :class="[
             eventIdx === 0
