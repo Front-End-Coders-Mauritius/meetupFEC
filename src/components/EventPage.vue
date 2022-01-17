@@ -89,7 +89,7 @@
             <div class="border-t-2 border-gray-100 pt-6">
               <dt class="text-base font-medium text-gray-500">Location</dt>
               <dd class="text-3xl font-extrabold tracking-tight text-gray-900">
-                {{ eventDetails.venue.loca }}
+                {{ eventDetails.venue.address_1 }}
               </dd>
             </div>
           </dl>
@@ -200,7 +200,10 @@ export default {
   updated() {
     this.eventsList;
     this.eventDetails;
-    this.updated = false;
+  },
+
+  mounted() {
+    console.log("eventlist", this.eventsList);
   },
 };
 </script>

@@ -24,7 +24,14 @@ module.exports = {
       "2xl": "1536px",
       // => @media (min-width: 1536px) { ... }
     },
-    extend: {},
+    extend: {
+      height: {
+        80: "80vh",
+        85: "85vh",
+        90: "90vh",
+        100: "100vh",
+      },
+    },
   },
   plugins: [
     require("@tailwindcss/line-clamp"),

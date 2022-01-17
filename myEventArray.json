@@ -731,6 +731,7 @@
     "waitlist_count": 0,
     "yes_rsvp_count": 21,
     "venue": {
+      "address_1": "online",
       "id": 26906060,
       "name": "Online event",
       "repinned": false,
@@ -774,6 +775,7 @@
     "waitlist_count": 0,
     "yes_rsvp_count": 9,
     "venue": {
+      "address_1": "online",
       "id": 26906060,
       "name": "Online event",
       "repinned": false,
@@ -817,6 +819,7 @@
     "waitlist_count": 0,
     "yes_rsvp_count": 15,
     "venue": {
+      "address_1": "online",
       "id": 26906060,
       "name": "Online event",
       "repinned": false,
@@ -860,6 +863,7 @@
     "waitlist_count": 0,
     "yes_rsvp_count": 13,
     "venue": {
+      "address_1": "online",
       "id": 26906060,
       "name": "Online event",
       "repinned": false,

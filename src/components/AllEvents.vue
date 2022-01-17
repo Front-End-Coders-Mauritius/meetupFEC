@@ -4,7 +4,7 @@
       class="latest-events-wrapper md:max-w-2xl lg:max-w-7xl mx-auto py-8 px-4 md:px-0"
     >
       <div
-        class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-4xl py-8"
+        class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-4xl py-4 md:py-8"
       >
         <h1 class="text-center text-red-700">Past events</h1>
       </div>

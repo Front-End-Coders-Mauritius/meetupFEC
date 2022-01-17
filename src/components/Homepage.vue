@@ -1,8 +1,8 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-  <div class="homepage-container bg-gray-50">
+  <div class="homepage-container">
     <div class="homepage-wrapper mx-auto max-w-7xl">
-      <main class="lg:relative">
+      <main class="lg:relative h-90">
         <div
           class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left"
         >
@@ -35,14 +35,6 @@
                   class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10"
                 >
                   View Events
-                </router-link>
-              </div>
-              <div class="rounded-md shadow mt-4 md:mt-0">
-                <router-link
-                  to="/dashboard"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-500 hover:bg-green-600 md:py-4 md:text-lg md:px-10"
-                >
-                  Events dashboard
                 </router-link>
               </div>
             </div>
