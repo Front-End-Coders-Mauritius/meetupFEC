@@ -10,10 +10,12 @@
             <h1
               class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl"
             >
-              <span class="block xl:inline">Front-End Coders</span>
+              <span class="block xl:inline text-blue-500"
+                >Front-End Coders</span
+              >
               {{ " " }}
               <span
-                class="block text-indigo-600 xl:inline text-transparent bg-clip-text bg-gradient-to-r from-red-300 via-blue-500 to-yellow-600"
+                class="block text-indigo-600 xl:inline text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-yellow-500 to-green-600"
                 >Mauritius</span
               >
             </h1>
@@ -30,7 +32,7 @@
               <div class="rounded-md shadow">
                 <router-link
                   to="/events"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-500 hover:bg-yellow-400 md:py-4 md:text-lg md:px-10"
                 >
                   View Events
                 </router-link>
@@ -38,7 +40,7 @@
               <div class="rounded-md shadow mt-4 md:mt-0">
                 <router-link
                   to="/dashboard"
-                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-500 hover:bg-green-600 md:py-4 md:text-lg md:px-10"
                 >
                   Events dashboard
                 </router-link>

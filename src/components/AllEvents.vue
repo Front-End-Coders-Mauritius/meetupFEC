@@ -4,9 +4,9 @@
       class="latest-events-wrapper md:max-w-2xl lg:max-w-7xl mx-auto py-8 px-4 md:px-0"
     >
       <div
-        class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl py-8"
+        class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-4xl py-8"
       >
-        <h1 class="text-center">Latest events</h1>
+        <h1 class="text-center text-red-700">Past events</h1>
       </div>
       <div
         class="rounded-lg bg-gray-200 overflow-hidden shadow-xl divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
@@ -23,12 +23,12 @@
             eventIdx === eventsList.length - 1
               ? 'rounded-bl-lg rounded-br-lg sm:rounded-bl-none'
               : '',
-            'relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500',
+            'relative group bg-white p-6',
           ]"
         >
           <div>
             <span
-              class="rounded-lg inline-flex p-3 ring-4 ring-white bg-blue-50 text-blue-700"
+              class="rounded-lg inline-flex p-3 ring-4 ring-white bg-red-50 text-red-700"
               ><ClockIcon class="h-6 w-6 mr-2" />
               <span>{{ new Date(event.local_date).toDateString() }}</span>
             </span>
@@ -49,7 +49,7 @@
             </p>
           </div>
           <span
-            class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"
+            class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-red-400"
             aria-hidden="true"
           >
             <svg

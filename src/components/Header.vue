@@ -7,18 +7,16 @@
         <div class="logo-image flex justify-start lg:w-0 lg:flex-1">
           <router-link to="/">
             <span class="sr-only">Workflow</span>
-            <img
-              class="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-              alt=""
-            />
+            <span class="text-xl md:text-4xl font-extrabold text-red-700"
+              >MeetupFEC</span
+            >
           </router-link>
         </div>
 
         <div class="md:flex items-center justify-end md:flex-1 lg:w-0">
           <router-link
             to="/events"
-            class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+            class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-red-600"
           >
             All events
           </router-link>
