@@ -56,7 +56,7 @@
               {{ eventDetails.name }}
             </h2>
             <div class="mt-6 text-gray-500 space-y-6">
-              <p class="text-lg">
+              <p class="text-lg break-words">
                 {{ eventDetails.description.replace(/<\/?[^>]+>/gi, "") }}
               </p>
             </div>
@@ -131,7 +131,7 @@
 
     <!-- view-dashboard button -->
     <div
-      class="dashboard-button absolute top-48 -right-16 text-md md:text-lg rounded-b-lg font-medium py-4 px-8 rotate-90 text-white bg-yellow-500 hover:bg-yellow-400"
+      class="dashboard-button absolute top-48 -right-12 md:-right-16 text-md md:text-lg rounded-b-lg font-medium py-2 md:py-4 px-8 rotate-90 text-white bg-yellow-500 hover:bg-yellow-400"
       @click="open = true"
     >
       View dashboard
