@@ -305,7 +305,7 @@ export default {
     XIcon,
   },
   data: () => {
-    const open = ref(true);
+    const open = ref(false);
     return {
       eventsListJson,
       open,
