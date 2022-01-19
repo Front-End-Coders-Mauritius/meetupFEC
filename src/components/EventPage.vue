@@ -46,7 +46,7 @@
         </div>
 
         <div
-          class="mx-auto md:mx-0 relative max-w-md sm:max-w-3xl sm:px-6 px-8"
+          class="mx-auto md:mx-0 relative max-w-md sm:max-w-3xl sm:px-6 px-8 py-3 md:py-0"
         >
           <!-- Content area -->
           <div class="">
