@@ -1,7 +1,7 @@
 <template>
-  <div class="latest-events-container bg-gray-50">
+  <div class="past-events-container bg-gray-50">
     <div
-      class="latest-events-wrapper md:max-w-2xl lg:max-w-7xl mx-auto py-8 px-4 md:px-0"
+      class="past-events-wrapper md:max-w-2xl lg:max-w-7xl mx-auto py-8 px-4 md:px-0"
     >
       <div
         class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-4xl py-4 md:py-8"
