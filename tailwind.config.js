@@ -1,7 +1,6 @@
 module.exports = {
   mode: "jit",
-  purge: ["./src/**/*.{vue,js,ts,jsx,tsx}"],
-  content: [],
+  content: ["./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
       Pacifico: ["Pacifico", "open-sans"],
