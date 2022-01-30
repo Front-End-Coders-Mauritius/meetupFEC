@@ -6,7 +6,7 @@
       <div
         class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-4xl py-4 md:py-8"
       >
-        <h1 class="text-center text-red-700">Past events</h1>
+        <h1 class="text-center text-blue-700">Past events</h1>
       </div>
       <div
         class="rounded-lg bg-gray-200 overflow-hidden shadow-xl divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px"
@@ -28,7 +28,7 @@
         >
           <div>
             <span
-              class="rounded-lg inline-flex p-3 ring-4 ring-white bg-red-50 text-red-700"
+              class="rounded-lg inline-flex p-3 ring-4 ring-white bg-blue-50 text-blue-700"
               ><ClockIcon class="h-6 w-6 mr-2" />
               <span>{{ new Date(event.local_date).toDateString() }}</span>
             </span>
@@ -49,7 +49,7 @@
             </p>
           </div>
           <span
-            class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-red-400"
+            class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-blue-400"
             aria-hidden="true"
           >
             <svg

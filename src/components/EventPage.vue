@@ -109,12 +109,24 @@
           </div>
         </div>
       </div>
-      <div class="images lg:mx-auto lg:max-w-7xl ms:mt-4 mt-16 px-4">
-        <ul
+      <div class="images lg:mx-auto lg:max-w-7xl md:mt-4 mt-16 px-4">
+        <div v-if="eventDetails.images === null">{{ eventDetails.images }}</div>
+        <div
+          v-else
+          class="pb-16 text-5xl font-extrabold text-blue-700 text-center"
+        >
+          Gallery
+        </div>
+        <div
           role="list"
           class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
         >
-          <li v-for="file in eventDetails.images" :key="file" class="relative">
+          <button
+            v-for="(file, index) in eventDetails.images"
+            :key="file"
+            @click="openLightboxOnSlide(index + 1)"
+            class="relative"
+          >
             <div
               class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden"
             >
@@ -124,8 +136,13 @@
                 class="object-cover pointer-events-none group-hover:opacity-75"
               />
             </div>
-          </li>
-        </ul>
+          </button>
+        </div>
+        <FsLightbox
+          :toggler="toggler"
+          :slide="slide"
+          :sources="eventDetails.images"
+        />
       </div>
     </div>
 
@@ -134,7 +151,7 @@
       class="dashboard-button absolute top-48 -right-12 md:-right-16 text-md md:text-lg rounded-b-lg font-medium py-2 md:py-4 px-8 rotate-90 text-white bg-yellow-500 hover:bg-yellow-400"
       @click="open = true"
     >
-      View dashboard
+      View events list
     </div>
     <!-- slide-over -->
     <TransitionRoot as="template" :show="open">
@@ -163,7 +180,7 @@
                   <div class="p-6">
                     <div class="flex items-start justify-between">
                       <DialogTitle class="text-lg font-medium text-gray-900">
-                        Dashboard
+                        Events List
                       </DialogTitle>
                       <div class="ml-3 h-7 flex items-center">
                         <button
@@ -287,6 +304,7 @@ import {
 } from "@heroicons/vue/solid";
 
 import eventsListJson from "../../myEventArray.json";
+import FsLightbox from "fslightbox-vue/v3";
 
 export default {
   components: {
@@ -303,13 +321,23 @@ export default {
     CalendarIcon,
     LocationMarkerIcon,
     XIcon,
+    FsLightbox,
   },
   data: () => {
     const open = ref(false);
     return {
       eventsListJson,
       open,
+      toggler: false,
+      slide: 1,
     };
+  },
+
+  methods: {
+    openLightboxOnSlide: function (number) {
+      this.slide = number;
+      this.toggler = !this.toggler;
+    },
   },
 
   computed: {
@@ -336,6 +364,10 @@ export default {
         return new Date(b.local_date) - new Date(a.local_date);
       });
       return sortedList;
+    },
+
+    eventImages() {
+      return this.eventDetails.images;
     },
   },
   updated() {
