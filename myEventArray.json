@@ -160,7 +160,7 @@
     "link": "https://www.meetup.com/frontendcodersmauritius/events/246706424/",
     "description": "<p>**UPDATE**<br/>The Front-end Coders meetup scheduled for today has been postponed to next week due to bad weather conditions!</p> <p>We are holding our first 2018 meetup at the offices of LSL Digital in Port-Louis. It\u2019s a free event and everyone is welcome. Join us to discover presentations on topics including CSS grids and insights on how to freelance by members of our community and participate in coding activities. It is a great way to share ideas and meet like-minded people.</p> <p>Schedule and plan :<br/>12:30 - 12:50 : A keylogger using CSS only (Sun)<br/>13:00 - 13:20 : Going Freelance ( Cedric )<br/>13:30 - 13:50 : Discover CSS Grid<br/>14:00 - 14:30 : Open Q&amp;A and Coding Challenges</p> <p>Food<br/>We will provide a light snacks for attendees. Vegetarian options will be available. Alternatively, there are local shops and cafes nearby.</p> <p>Tickets<br/>This is a free event and seats are limited. Please RSVP.</p> <p>Who are we?<br/>Front-End Coders is a global community for web professionals and students which focuses on education, innovation and networking.</p> ",
     "visibility": "public",
-    "images": [],
+    "images": null,
     "member_pay_fee": false
   },
   {
@@ -613,6 +613,7 @@
     "link": "https://www.meetup.com/frontendcodersmauritius/events/268082737/",
     "description": "<p>Hello Front-End Coders!<br/>Let's meet this Saturday and start 2020 with our first monthly meetup. ✌️</p> <p>Thanks to Bocasay (<a href=\"https://www.bocasay.com/\" class=\"linkified\">https://www.bocasay.com/</a>) &amp; Tristan Hebert for hosting us!</p> <p>Location<br/>Bocasay (Maurice)<br/>51A Rue du Savoir, Ebene 72201<br/><a href=\"https://maps.app.goo.gl/dvHE768DM2zonnoq5\" class=\"linkified\">https://maps.app.goo.gl/dvHE768DM2zonnoq5</a></p> <p>Date: (POSTPONED) Tentatively Saturday 1st Feb</p> <p>Contact:<br/>Sandeep -[masked]<br/>Cedric -[masked]</p> <p>Timing:<br/>Start: 10:00<br/>Finish: 15:00</p> <p>Max capacity: 20 people</p> <p>Agenda:<br/>- Discuss the yearly organisation of Front-End Coders<br/>- Discuss potential activities as Front-End Coders for the DevCon<br/>- Discuss Contributing to the Devcon(2020) website<br/>- Practice runs for DevCon presentations</p> <p># FREE FOOD 🍕</p> ",
     "how_to_find_us": "Opposite to the MCCI, in the building where there's a Sony outlet.",
+    "images": null,
     "visibility": "public",
     "member_pay_fee": false
   },
@@ -662,6 +663,7 @@
     "link": "https://www.meetup.com/frontendcodersmauritius/events/268295472/",
     "description": "<p>Hello Front-End Coders!<br/>Let's meet on the Saturday 15th of Feb and start 2020 with our first monthly meetup. ✌️</p> <p>Thanks to Bocasay (<a href=\"https://www.bocasay.com/\" class=\"linkified\">https://www.bocasay.com/</a>) &amp; Tristan Hebert for hosting us!</p> <p>Location<br/>Bocasay (Maurice)<br/>51A Rue du Savoir, Ebene 72201<br/><a href=\"https://maps.app.goo.gl/dvHE768DM2zonnoq5\" class=\"linkified\">https://maps.app.goo.gl/dvHE768DM2zonnoq5</a></p> <p>Contact:<br/>Sandeep -[masked]<br/>Cedric -[masked]</p> <p>Timing:<br/>Start: 10:30<br/>Finish: 15:00</p> <p>Max capacity: 20 people</p> <p>Agenda:<br/>- Discuss the yearly organisation of Front-End Coders - Open Floor<br/>- Discuss Contributing to the Devcon(2020) website - Sandeep Ramgolam<br/>- Callbacks &amp; Promises for asynchronous JavaScript - Cedric Poilly<br/>- Practice runs for DevCon presentations - FFA (We already have one. Others are most welcome)</p> <p># FREE FOOD 🍕</p> ",
     "how_to_find_us": "Opposite to the MCCI, in the building where there's a Sony outlet.",
+    "images": null,
     "visibility": "public",
     "member_pay_fee": false
   },
@@ -713,6 +715,7 @@
     "link": "https://www.meetup.com/frontendcodersmauritius/events/268977842/",
     "description": "<p>⚠️ UPDATES 15/03/2020 ⚠️<br/>---<br/>Due to the current situation and for safety reasons. We think it's best that we avoid gatherings right now. We have decided to postponed the next front-end coders meetup. The next date will be communicated on meetup as usual. Let us know if you would be interested in an online meetup ?</p> <p>Thank you for your understanding.<br/>Wash your hands and stay safe<br/>Front-end Coders Team<br/>---</p> <p>Hello Front-End Coders &amp; Crafts(wo)men!</p> <p>Let's meet on the Saturday 21st of March for FEC's second monthly meetup: a joint event with the MSCC! 🥳🎉</p> <p>Thanks to Middlesex University Mauritius for hosting us!</p> <p>Location<br/><a href=\"https://goo.gl/maps/FMxhexL8qqAWLwDy7\" class=\"linkified\">https://goo.gl/maps/FMxhexL8qqAWLwDy7</a></p> <p>Contact:<br/>Sandeep -[masked]<br/>Cedric -[masked]</p> <p>Timing:<br/>Start: 10:30<br/>Finish: 15:00</p> <p>Max capacity:<br/>TBD</p> <p>Agenda:<br/>- VueJS Mauritius<br/>- JWT (JSON Web Token) from Back-End to Front-End (with Vue.js)<br/>- PWAs: Beyond The Service Worker (with Vue.js)<br/>- Basic Concept of React.js</p> <p># FREE FOOD 🍕</p> ",
     "visibility": "public",
+    "images": null,
     "member_pay_fee": false
   },
 
@@ -757,6 +760,7 @@
     "link": "https://www.meetup.com/frontendcodersmauritius/events/270040148/",
     "description": "<p>Join us for an online meetup to talk about the front-end world and a few interesting topics !</p> <p>Also joining us will be GophersMU group to talk about go and do some small presentations.</p> <p># Topics<br/>- Exploring Vue Composition API (Sandeep)<br/>- Vue experience sharing (Kushul)<br/>- Go Routines (Jules)<br/>- A Telegram Bot in Go (Yusuf)</p> <p>Join on the following link:<br/><a href=\"https://meet.mscc.mu/FabulousFrontendFantasies\" class=\"linkified\">https://meet.mscc.mu/FabulousFrontendFantasies</a></p> <p>We only have simple rules:<br/>- Kindly mute your mic when you're not speaking<br/>- Use the chat to ask questions<br/>- Be nice<br/>- Be Friendly<br/>- Be Courteous</p> ",
     "visibility": "public",
+    "images": null,
     "member_pay_fee": false
   },
 
@@ -801,6 +805,7 @@
     "link": "https://www.meetup.com/frontendcodersmauritius/events/270381025/",
     "description": "<p>Join us for an online meetup to talk about the front-end world and a few interesting topics !</p> <p># Topics<br/>- NuxtJS Darkmode (Kushul)<br/>- Vue 3 Portals / Teleport (Sandeep)<br/>- Vite - vuejs, development without a bundler (Sandeep)<br/>- Open discussion</p> <p>Join on the following link:<br/><a href=\"https://meet.mscc.mu/FabulousFrontendFantasies\" class=\"linkified\">https://meet.mscc.mu/FabulousFrontendFantasies</a></p> <p>We only have simple rules:<br/>- Kindly mute your mic when you're not speaking<br/>- Use the chat to ask questions<br/>- Be nice<br/>- Be Friendly<br/>- Be Courteous</p> ",
     "visibility": "public",
+    "images": null,
     "member_pay_fee": false
   },
 
@@ -845,6 +850,7 @@
     "link": "https://www.meetup.com/frontendcodersmauritius/events/270971949/",
     "description": "<p>Join us for an online meetup to talk about the front-end world and a few interesting topics !</p> <p># Topics<br/>- Exploring the console object (Christophe)<br/>- Basic Concepts of React (Joshua IwuGod)<br/>- A gentle look into Cypress (Jordan Bienvenue)<br/>- Front-end Open Discussions (Sandeep)</p> <p>Join on the following link:<br/><a href=\"https://meet.mscc.mu/FabulousFrontendFantasies\" class=\"linkified\">https://meet.mscc.mu/FabulousFrontendFantasies</a></p> <p>We only have simple rules:<br/>- Kindly mute your mic when you're not speaking<br/>- Use the chat to ask questions<br/>- Be nice<br/>- Be Friendly<br/>- Be Courteous</p> ",
     "visibility": "public",
+    "images": null,
     "member_pay_fee": false
   },
 
@@ -889,6 +895,7 @@
     "link": "https://www.meetup.com/frontendcodersmauritius/events/271940927/",
     "description": "<p>Join us for an online meetup to talk about the front-end world and a few interesting topics!</p> <p># Topics<br/>- An introduction to Cypress with Vue (Jordan Bienvenue)<br/>- Do you think of accessibility when you build a website? ([guest speaker] Razvan Statescu AKA @the.dev.guy on Instagram)<br/>- Open Discussions about Front-end Topics ( Sandeep )</p> <p>Join on the following link:<br/><a href=\"https://meet.mscc.mu/FabulousFrontendFantasies\" class=\"linkified\">https://meet.mscc.mu/FabulousFrontendFantasies</a></p> <p>We only have simple rules:<br/>- Kindly mute your mic when you're not speaking<br/>- Use the chat to ask questions<br/>- Be nice<br/>- Be Friendly<br/>- Be Courteous</p> ",
     "how_to_find_us": "https://meet.google.com/zwv-cquu-aqe",
+    "images": null,
     "visibility": "public",
     "member_pay_fee": false
   },
@@ -938,6 +945,7 @@
     "link": "https://www.meetup.com/frontendcodersmauritius/events/273573909/",
     "description": "<p>A series of interesting talks to reignite the meetup vibes on the island !</p> <p>.topics {<br/>- ReactivityEverywhere.js - Giovanni Jules Mikeal<br/>- Developers are not just code writers - Cedric Poilly<br/>- to be announced soon!<br/>}</p> <p>Bocasay has been very kind and agreed to host us once again!</p> <p>to book your seat and let your friends know :D</p> <p>HEALTH AND SAFETY PRECAUTIONS:</p> <p>- Please wear a mask.<br/>- Use hand sanitizers at the entrance.<br/>- Social distancing rules apply inside the meetup.</p> ",
     "visibility": "public",
+    "images": null,
     "member_pay_fee": false
   }
 ]
