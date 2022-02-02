@@ -117,32 +117,26 @@
         >
           Gallery
         </div>
-        <div
-          role="list"
+
+        <lightgallery
+          :settings="{ speed: 500, plugins: plugins }"
+          :onInit="onInit"
+          :onBeforeSlide="onBeforeSlide"
           class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
         >
-          <button
+          <a
             v-for="(file, index) in eventDetails.images"
             :key="file"
-            @click="openLightboxOnSlide(index + 1)"
-            class="relative"
+            :href="file"
+            class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden"
           >
-            <div
-              class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden"
-            >
-              <img
-                :src="file"
-                alt=""
-                class="object-cover pointer-events-none group-hover:opacity-75"
-              />
-            </div>
-          </button>
-        </div>
-        <FsLightbox
-          :toggler="toggler"
-          :slide="slide"
-          :sources="eventDetails.images"
-        />
+            <img
+              :alt="index"
+              :src="file"
+              class="object-cover pointer-events-none group-hover:opacity-75"
+            />
+          </a>
+        </lightgallery>
       </div>
     </div>
 
@@ -304,7 +298,9 @@ import {
 } from "@heroicons/vue/solid";
 
 import eventsListJson from "../../myEventArray.json";
-import FsLightbox from "fslightbox-vue/v3";
+import Lightgallery from "lightgallery/vue";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 
 export default {
   components: {
@@ -321,22 +317,23 @@ export default {
     CalendarIcon,
     LocationMarkerIcon,
     XIcon,
-    FsLightbox,
+    Lightgallery,
   },
   data: () => {
     const open = ref(false);
     return {
       eventsListJson,
       open,
-      toggler: false,
-      slide: 1,
+      plugins: [lgThumbnail, lgZoom],
     };
   },
 
   methods: {
-    openLightboxOnSlide: function (number) {
-      this.slide = number;
-      this.toggler = !this.toggler;
+    onInit: () => {
+      console.log("lightGallery has been initialized");
+    },
+    onBeforeSlide: () => {
+      console.log("calling before slide");
     },
   },
 
@@ -376,3 +373,8 @@ export default {
   },
 };
 </script>
+<style lang="css">
+@import "lightgallery/css/lightgallery.css";
+@import "lightgallery/css/lg-thumbnail.css";
+@import "lightgallery/css/lg-zoom.css";
+</style>
