@@ -117,7 +117,7 @@
         >
           Gallery
         </div>
-
+        <!-- 
         <lightgallery
           :settings="{ speed: 500, plugins: plugins }"
           :onInit="onInit"
@@ -136,7 +136,7 @@
               class="object-cover pointer-events-none group-hover:opacity-75"
             />
           </a>
-        </lightgallery>
+        </lightgallery> -->
       </div>
     </div>
 
@@ -298,9 +298,6 @@ import {
 } from "@heroicons/vue/solid";
 
 import eventsListJson from "../../myEventArray.json";
-import Lightgallery from "lightgallery/vue";
-import lgThumbnail from "lightgallery/plugins/thumbnail";
-import lgZoom from "lightgallery/plugins/zoom";
 
 export default {
   components: {
@@ -317,26 +314,14 @@ export default {
     CalendarIcon,
     LocationMarkerIcon,
     XIcon,
-    Lightgallery,
   },
   data: () => {
     const open = ref(false);
     return {
       eventsListJson,
       open,
-      plugins: [lgThumbnail, lgZoom],
     };
   },
-
-  methods: {
-    onInit: () => {
-      console.log("lightGallery has been initialized");
-    },
-    onBeforeSlide: () => {
-      console.log("calling before slide");
-    },
-  },
-
   computed: {
     eventID() {
       return this.$route.params.id;
@@ -373,8 +358,3 @@ export default {
   },
 };
 </script>
-<style lang="css">
-@import "lightgallery/css/lightgallery.css";
-@import "lightgallery/css/lg-thumbnail.css";
-@import "lightgallery/css/lg-zoom.css";
-</style>
