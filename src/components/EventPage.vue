@@ -117,11 +117,8 @@
         >
           Gallery
         </div>
-        <!-- 
-        <lightgallery
-          :settings="{ speed: 500, plugins: plugins }"
-          :onInit="onInit"
-          :onBeforeSlide="onBeforeSlide"
+        
+        <div
           class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
         >
           <a
@@ -136,7 +133,7 @@
               class="object-cover pointer-events-none group-hover:opacity-75"
             />
           </a>
-        </lightgallery> -->
+        </div>
       </div>
     </div>
 
