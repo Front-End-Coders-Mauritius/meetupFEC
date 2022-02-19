@@ -132,7 +132,25 @@
               class="object-cover pointer-events-none group-hover:opacity-75"
             />
           </div> -->
-          <div></div>
+          <div>
+            <vue-picture-swipe
+              :items="[
+                {
+                  src: 'https://picsum.photos/id/237/200/300',
+                  thumbnail: 'https://picsum.photos/id/237/200/300',
+                  w: 600,
+                  h: 400,
+                  title: 'Will be used for caption',
+                },
+                {
+                  src: 'https://picsum.photos/seed/picsum/200/300',
+                  thumbnail: 'https://picsum.photos/seed/picsum/200/300',
+                  w: 1200,
+                  h: 900,
+                },
+              ]"
+            ></vue-picture-swipe>
+          </div>
         </div>
       </div>
     </div>
@@ -295,6 +313,7 @@ import {
 } from "@heroicons/vue/solid";
 
 import eventsListJson from "../../myEventArray.json";
+import VuePictureSwipe from "vue3-picture-swipe";
 
 export default {
   components: {
@@ -311,6 +330,7 @@ export default {
     CalendarIcon,
     LocationMarkerIcon,
     XIcon,
+    VuePictureSwipe,
   },
   data: () => {
     const open = ref(false);
