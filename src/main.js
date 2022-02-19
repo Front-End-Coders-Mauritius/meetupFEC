@@ -4,6 +4,7 @@ import App from "./App.vue";
 import Homepage from "../src/components/Homepage.vue";
 import AllEvents from "../src/components/AllEvents.vue";
 import EventPage from "../src/components/EventPage.vue";
+import LightGallery from "vue-light-gallery";
 
 const routes = [
   {
@@ -29,5 +30,6 @@ const router = createRouter({
 
 const app = createApp(App);
 
+app.use(LightGallery);
 app.use(router);
 app.mount("#app");

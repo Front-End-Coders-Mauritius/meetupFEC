@@ -118,29 +118,8 @@
           Gallery
         </div>
 
-        <div class="flex">
-          <vue-picture-swipe
-            class="w-96"
-            :items="imagesList"
-          ></vue-picture-swipe>
-        </div>
         <div>
-          <button @click="openLightboxOnSlide(1)">
-            Open lightbox on first slide
-          </button>
-
-          <button @click="openLightboxOnSlide(2)">
-            Open lightbox on second slide
-          </button>
-
-          <FsLightbox
-            :toggler="toggler"
-            :slide="slide"
-            :sources="[
-              'https://picsum.photos/seed/picsum/200/300',
-              'https://picsum.photos/200/300?grayscale',
-            ]"
-          />
+          <vue-picture-swipe :items="imagesList"></vue-picture-swipe>
         </div>
       </div>
     </div>
@@ -304,7 +283,6 @@ import {
 
 import eventsListJson from "../../myEventArray.json";
 import VuePictureSwipe from "vue3-picture-swipe";
-import FsLightbox from "fslightbox-vue/v3";
 
 export default {
   components: {
@@ -322,7 +300,6 @@ export default {
     LocationMarkerIcon,
     XIcon,
     VuePictureSwipe,
-    FsLightbox,
   },
   data: () => {
     const open = ref(false);
@@ -330,8 +307,8 @@ export default {
       eventsListJson,
       open,
       myArray: [],
-      toggler: false,
-      slide: 1,
+      count: 0,
+      galleryArray: [],
     };
   },
   computed: {
@@ -365,25 +342,30 @@ export default {
     },
 
     imagesList() {
-      this.eventImages.forEach((element) => {
-        this.myArray.push({
-          src: element,
-          thumbnail: element,
-          w: 1280,
-          h: 720,
+      if (this.count < 1) {
+        this.eventImages.forEach((element) => {
+          this.count++;
+          this.myArray.push({
+            src: element,
+            thumbnail: element,
+            w: 1280,
+            h: 720,
+          });
         });
-      });
+      }
+
       return this.myArray;
     },
   },
-  methods: {
-    openLightboxOnSlide: function (number) {
-      this.slide = number;
-      this.toggler = !this.toggler;
-    },
-  },
   mounted() {
-    console.log(this.imagesList);
+    // adding style inside vuePictureSwipe gallery
+    let gallery = document.querySelector(".my-gallery");
+    gallery.classList.add("galleryStyle");
+    for (let index = 0; index < gallery.childNodes.length; index++) {
+      const element = gallery.childNodes[index];
+      element.className = "galleryThumbnailStyle";
+      this.galleryArray.push(element);
+    }
 
     scrollTo({
       top: 0,
@@ -397,3 +379,12 @@ export default {
   },
 };
 </script>
+<style>
+.galleryStyle {
+  @apply grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8;
+}
+
+.galleryThumbnailStyle {
+  @apply block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden;
+}
+</style>
