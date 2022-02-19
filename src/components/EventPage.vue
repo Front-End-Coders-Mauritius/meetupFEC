@@ -118,39 +118,29 @@
           Gallery
         </div>
 
-        <div
-          class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
-        >
-          <!-- <div
-            v-for="(file, index) in eventDetails.images"
-            :key="file"
-            class="group block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden"
-          >
-            <img
-              :alt="index"
-              :src="file"
-              class="object-cover pointer-events-none group-hover:opacity-75"
-            />
-          </div> -->
-          <div>
-            <vue-picture-swipe
-              :items="[
-                {
-                  src: 'https://picsum.photos/id/237/200/300',
-                  thumbnail: 'https://picsum.photos/id/237/200/300',
-                  w: 600,
-                  h: 400,
-                  title: 'Will be used for caption',
-                },
-                {
-                  src: 'https://picsum.photos/seed/picsum/200/300',
-                  thumbnail: 'https://picsum.photos/seed/picsum/200/300',
-                  w: 1200,
-                  h: 900,
-                },
-              ]"
-            ></vue-picture-swipe>
-          </div>
+        <div class="flex">
+          <vue-picture-swipe
+            class="w-96"
+            :items="imagesList"
+          ></vue-picture-swipe>
+        </div>
+        <div>
+          <button @click="openLightboxOnSlide(1)">
+            Open lightbox on first slide
+          </button>
+
+          <button @click="openLightboxOnSlide(2)">
+            Open lightbox on second slide
+          </button>
+
+          <FsLightbox
+            :toggler="toggler"
+            :slide="slide"
+            :sources="[
+              'https://picsum.photos/seed/picsum/200/300',
+              'https://picsum.photos/200/300?grayscale',
+            ]"
+          />
         </div>
       </div>
     </div>
@@ -314,6 +304,7 @@ import {
 
 import eventsListJson from "../../myEventArray.json";
 import VuePictureSwipe from "vue3-picture-swipe";
+import FsLightbox from "fslightbox-vue/v3";
 
 export default {
   components: {
@@ -331,12 +322,16 @@ export default {
     LocationMarkerIcon,
     XIcon,
     VuePictureSwipe,
+    FsLightbox,
   },
   data: () => {
     const open = ref(false);
     return {
       eventsListJson,
       open,
+      myArray: [],
+      toggler: false,
+      slide: 1,
     };
   },
   computed: {
@@ -368,8 +363,28 @@ export default {
     eventImages() {
       return this.eventDetails.images;
     },
+
+    imagesList() {
+      this.eventImages.forEach((element) => {
+        this.myArray.push({
+          src: element,
+          thumbnail: element,
+          w: 1280,
+          h: 720,
+        });
+      });
+      return this.myArray;
+    },
+  },
+  methods: {
+    openLightboxOnSlide: function (number) {
+      this.slide = number;
+      this.toggler = !this.toggler;
+    },
   },
   mounted() {
+    console.log(this.imagesList);
+
     scrollTo({
       top: 0,
       left: 0,
