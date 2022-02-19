@@ -117,7 +117,7 @@
         >
           Gallery
         </div>
-        
+
         <div
           class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
         >
@@ -348,6 +348,13 @@ export default {
     eventImages() {
       return this.eventDetails.images;
     },
+  },
+  mounted() {
+    scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   },
   updated() {
     this.eventsList;
