@@ -342,6 +342,10 @@ export default {
     },
 
     imagesList() {
+      console.log(this.eventImages);
+      if (this.eventImages === null) {
+        return [];
+      }
       if (this.count < 1) {
         this.eventImages.forEach((element) => {
           this.count++;
@@ -357,15 +361,20 @@ export default {
       return this.myArray;
     },
   },
+  methods: {
+    galleryStyle() {
+      // adding style inside vuePictureSwipe gallery
+      let gallery = document.querySelector(".my-gallery");
+      gallery.classList.add("galleryStyle");
+      for (let index = 0; index < gallery.childNodes.length; index++) {
+        const element = gallery.childNodes[index];
+        element.className = "galleryThumbnailStyle";
+        this.galleryArray.push(element);
+      }
+    },
+  },
   mounted() {
-    // adding style inside vuePictureSwipe gallery
-    let gallery = document.querySelector(".my-gallery");
-    gallery.classList.add("galleryStyle");
-    for (let index = 0; index < gallery.childNodes.length; index++) {
-      const element = gallery.childNodes[index];
-      element.className = "galleryThumbnailStyle";
-      this.galleryArray.push(element);
-    }
+    this.galleryStyle();
 
     scrollTo({
       top: 0,
@@ -373,8 +382,12 @@ export default {
       behavior: "smooth",
     });
   },
+
   updated() {
+    this.galleryStyle();
     this.eventsList;
+    this.eventImages;
+    this.imagesList;
     this.eventDetails;
   },
 };
