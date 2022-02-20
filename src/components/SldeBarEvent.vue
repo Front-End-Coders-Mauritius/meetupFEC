@@ -1,5 +1,5 @@
 <template>
-  <TransitionRoot as="template" :show="open">
+  <TransitionRoot as="template" :show="setOpen">
     <Dialog
       as="div"
       class="fixed inset-0 overflow-hidden"
@@ -163,6 +163,19 @@ export default {
     CalendarIcon,
     LocationMarkerIcon,
     XIcon,
+  },
+
+  computed: {
+    setOpen() {
+      return this.open;
+    },
+  },
+  mounted() {
+    console.log("mounted sidebar", this.open);
+  },
+  updated() {
+    console.log("updated sidebar", this.open);
+    this.open;
   },
 };
 </script>
