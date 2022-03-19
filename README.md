@@ -2,4 +2,4 @@
 
 A website designed for Front-end Coders Mauritius meetups
 
-[link text itself]: https://front-end-coders-mauritius.netlify.app/
+**[View Website](https://front-end-coders-mauritius.netlify.app/)**
