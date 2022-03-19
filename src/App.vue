@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <router-view />
+  <router-view :key="$route.params?.id" />
 </template>
 <script>
 import Header from "./components/Header.vue";
