@@ -118,7 +118,7 @@
           Gallery
         </div>
 
-        <Gallery :eventImages="eventImages" :key="eventImages.join()" />
+        <Gallery :eventImages="eventImages" :key="eventImages" />
       </div>
     </div>
 
