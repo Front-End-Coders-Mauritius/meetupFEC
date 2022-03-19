@@ -118,9 +118,7 @@
           Gallery
         </div>
 
-        <div>
-          <vue-picture-swipe :items="imagesList"></vue-picture-swipe>
-        </div>
+        <Gallery :eventImages="eventImages" :key="eventImages.join()" />
       </div>
     </div>
 
@@ -187,71 +185,7 @@
                   </div>
 
                   <!-- events list -->
-                  <ul
-                    role="list"
-                    class="divide-y divide-gray-200 overflow-y-auto"
-                  >
-                    <li
-                      v-for="(event, index) in sortedEventList"
-                      :key="event"
-                      :value="index"
-                      active-class="red"
-                    >
-                      <router-link
-                        :to="{
-                          name: 'eventID',
-                          params: { id: event.id },
-                        }"
-                        class="block hover:bg-gray-50"
-                      >
-                        <div class="flex flex-col gap-4 px-8 py-4">
-                          <div class="flex flex-col-reverse gap-2">
-                            <p
-                              class="event-name text-sm md:text-lg font-medium text-indigo-600 line-clamp-2"
-                            >
-                              {{ event.name }}
-                            </p>
-                            <div class="event-tags flex justify-end">
-                              <p
-                                class="event-status mr-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
-                              >
-                                {{ event.status }}
-                              </p>
-                            </div>
-                          </div>
-                          <p class="text-gray-400 line-clamp-2">
-                            {{ event.description.replace(/<\/?[^>]+>/gi, "") }}
-                          </p>
-                          <div class="flex flex-col gap-2">
-                            <div class="flex flex-col gap-4">
-                              <p
-                                class="flex items-center text-sm text-gray-500 mt-0"
-                              >
-                                <LocationMarkerIcon
-                                  class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400 truncate"
-                                  aria-hidden="true"
-                                />
-                                <span class="truncate">{{
-                                  event.venue.address_1
-                                }}</span>
-                              </p>
-                            </div>
-                            <div
-                              class="flex items-center text-sm text-gray-500 h-5"
-                            >
-                              <CalendarIcon
-                                class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
-                                aria-hidden="true"
-                              />
-                              <p>
-                                {{ new Date(event.local_date).toDateString() }}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </router-link>
-                    </li>
-                  </ul>
+                  <SliderEventList :sortedEventList="eventsList" />
                 </div>
               </div>
             </TransitionChild>
@@ -282,7 +216,8 @@ import {
 } from "@heroicons/vue/solid";
 
 import eventsListJson from "../../myEventArray.json";
-import VuePictureSwipe from "vue3-picture-swipe";
+import SliderEventList from "./SliderEventList.vue";
+import Gallery from "./Gallery.vue";
 
 export default {
   components: {
@@ -299,7 +234,8 @@ export default {
     CalendarIcon,
     LocationMarkerIcon,
     XIcon,
-    VuePictureSwipe,
+    SliderEventList,
+    Gallery,
   },
   data: () => {
     const open = ref(false);
@@ -340,42 +276,9 @@ export default {
     eventImages() {
       return this.eventDetails.images;
     },
-
-    imagesList() {
-      console.log(this.eventImages);
-      if (this.eventImages === null) {
-        return [];
-      }
-      if (this.count < 1) {
-        this.eventImages.forEach((element) => {
-          this.count++;
-          this.myArray.push({
-            src: element,
-            thumbnail: element,
-            w: 1280,
-            h: 720,
-          });
-        });
-      }
-
-      return this.myArray;
-    },
   },
-  methods: {
-    galleryStyle() {
-      // adding style inside vuePictureSwipe gallery
-      let gallery = document.querySelector(".my-gallery");
-      gallery.classList.add("galleryStyle");
-      for (let index = 0; index < gallery.childNodes.length; index++) {
-        const element = gallery.childNodes[index];
-        element.className = "galleryThumbnailStyle";
-        this.galleryArray.push(element);
-      }
-    },
-  },
+  methods: {},
   mounted() {
-    this.galleryStyle();
-
     scrollTo({
       top: 0,
       left: 0,
@@ -384,20 +287,10 @@ export default {
   },
 
   updated() {
-    this.galleryStyle();
     this.eventsList;
-    this.eventImages;
     this.imagesList;
     this.eventDetails;
   },
 };
 </script>
-<style>
-.galleryStyle {
-  @apply grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8;
-}
-
-.galleryThumbnailStyle {
-  @apply block w-full aspect-w-10 aspect-h-7 rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-gray-100 focus-within:ring-indigo-500 overflow-hidden;
-}
-</style>
+<style></style>
