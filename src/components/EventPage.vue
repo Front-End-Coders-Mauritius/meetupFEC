@@ -150,7 +150,7 @@
 
     <!-- view-dashboard button -->
     <div
-      class="dashboard-button absolute top-48 -right-12 md:-right-16 text-md md:text-lg rounded-b-lg font-medium py-2 md:py-4 px-8 rotate-90 text-white bg-yellow-500 hover:bg-yellow-400"
+      class="dashboard-button absolute top-48 -right-16 md:-right-17 lg:-right-16 text-md md:text-lg rounded-b-lg font-medium py-2 md:py-4 px-8 rotate-90 text-white bg-yellow-500 hover:bg-yellow-400"
       @click="open = true"
     >
       View events list
