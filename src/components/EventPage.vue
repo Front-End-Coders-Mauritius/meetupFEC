@@ -105,6 +105,32 @@
                   {{ eventDetails.venue.address_1 }}
                 </dd>
               </div>
+              <div class="border-t-2 border-gray-100 pt-6">
+                <dt class="text-base font-medium text-gray-500">Share</dt>
+                <dd class="flex bg-gray-100 rounded-md px-2 py-1 w-[450px]">
+                  <input
+                    class="text-md tracking-tight text-gray-600 line-clamp-3 bg-gray-100 w-[500px] pr-2 focus-none"
+                    type="text"
+                    :value="`front-end-coders-mauritius.netlify.app/event/${eventID}`"
+                    id="myInput"
+                  />
+                  <div @click="copy" class="cursor-pointer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"
+                      />
+                      <path
+                        d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"
+                      />
+                    </svg>
+                  </div>
+                </dd>
+              </div>
             </dl>
           </div>
         </div>
@@ -277,7 +303,14 @@ export default {
       return this.eventDetails.images;
     },
   },
-  methods: {},
+  methods: {
+    copy() {
+      let copyText = document.getElementById("myInput");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+    },
+  },
   mounted() {
     scrollTo({
       top: 0,
