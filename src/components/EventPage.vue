@@ -107,9 +107,9 @@
               </div>
               <div class="border-t-2 border-gray-100 pt-6">
                 <dt class="text-base font-medium text-gray-500">Share</dt>
-                <dd class="flex bg-gray-100 rounded-md px-2 py-1 w-[450px]">
+                <dd class="flex bg-gray-100 rounded-md px-2 py-1 sm:w-[450px]">
                   <input
-                    class="text-md tracking-tight text-gray-600 line-clamp-3 bg-gray-100 w-[500px] pr-2 focus-none"
+                    class="text-md tracking-tight text-gray-600 line-clamp-3 bg-gray-100 sm:w-[500px] pr-2 break-words"
                     type="text"
                     :value="`front-end-coders-mauritius.netlify.app/event/${eventID}/`"
                     id="myInput"
