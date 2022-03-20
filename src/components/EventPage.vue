@@ -111,7 +111,7 @@
                   <input
                     class="text-md tracking-tight text-gray-600 line-clamp-3 bg-gray-100 w-[500px] pr-2 focus-none"
                     type="text"
-                    :value="`front-end-coders-mauritius.netlify.app/event/${eventID}`"
+                    :value="`front-end-coders-mauritius.netlify.app/event/${eventID}/s`"
                     id="myInput"
                   />
                   <div @click="copy" class="cursor-pointer">
