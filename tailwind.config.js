@@ -6,6 +6,7 @@ module.exports = {
       Pacifico: ["Pacifico", "open-sans"],
       Mochiy: ['"Mochiy Pop P One"', "sans-serif"],
       FiraSans: ['"Fira Sans"', "sans-serif"],
+      Major: ["Major Mono Display", "monospace"],
     },
     screens: {
       sm: "640px",
