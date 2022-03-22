@@ -45,7 +45,7 @@
         >
           <img
             class="absolute inset-0 w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2102&q=80"
+            src="../../public/img/homepage2.jpg"
             alt=""
           />
         </div>

@@ -8,7 +8,7 @@
           <router-link to="/" class="flex gap-2">
             <span class="sr-only">Workflow</span>
             <span
-              class="text-xl md:text-4xl text-gray-700 font-Pacifico tracking-tighter"
+              class="text-xl md:text-4xl text-yellow-700 font-Pacifico tracking-tighter"
               >Front-End Coders
               <span
                 class="md:text-sm text-[10px] float-right ml-2 tracking-normal font-normal"
