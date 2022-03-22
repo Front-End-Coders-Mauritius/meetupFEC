@@ -7,9 +7,14 @@
         <div class="logo-image flex justify-start lg:w-0 lg:flex-1">
           <router-link to="/" class="flex gap-2">
             <span class="sr-only">Workflow</span>
-            <span class="text-xl md:text-4xl font-extrabold text-red-700"
-              >Front-End Coders Mauritius</span
+            <span
+              class="text-xl md:text-4xl font-extrabold text-gray-700 tracking-tight"
+              >Front-End Coders
+              <span class="text-sm float-right ml-2 tracking-normal"
+                >MRU</span
+              ></span
             >
+            <!-- <img src="../../public/img/favicon.png" alt="" srcset="" /> -->
           </router-link>
         </div>
 
