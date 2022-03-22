@@ -135,11 +135,11 @@
           </div>
         </div>
       </div>
-      <div class="images lg:mx-auto lg:max-w-7xl md:mt-4 mt-16 px-4">
+      <div class="images lg:mx-auto lg:max-w-7xl md:mt-6 mt-16 px-4">
         <div v-if="eventDetails.images === null">{{ eventDetails.images }}</div>
         <div
           v-else
-          class="pb-16 text-5xl font-extrabold text-blue-700 text-center"
+          class="pb-4 text-5xl font-extrabold text-blue-700 text-center"
         >
           Gallery
         </div>

@@ -23,7 +23,14 @@
             </p>
             <div class="event-tags flex justify-end">
               <p
-                class="event-status mr-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
+                :class="{
+                  'bg-yellow-100 text-yellow-800 tagStyle':
+                    event.status === 'past',
+                  'bg-green-100 text-green-800 tagStyle':
+                    event.status === 'upcoming',
+                  'bg-red-100 text-red-800 tagStyle':
+                    event.status === 'cancelled',
+                }"
               >
                 {{ event.status }}
               </p>
@@ -74,3 +81,8 @@ export default {
   },
 };
 </script>
+<style>
+.tagStyle {
+  @apply mr-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full;
+}
+</style>

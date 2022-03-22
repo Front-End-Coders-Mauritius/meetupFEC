@@ -41,7 +41,16 @@
               >
                 <!-- Extend touch target to entire panel -->
                 <span class="absolute inset-0" aria-hidden="true" />
-                {{ event.name }}
+                <span>{{ event.name }}</span>
+                <p
+                  :class="[
+                    event.status === 'upcoming'
+                      ? 'bg-green-100 text-green-800 tagStyle'
+                      : '',
+                  ]"
+                >
+                  {{ event.status }}
+                </p>
               </router-link>
             </h3>
             <p class="mt-2 text-sm text-gray-500 line-clamp-3 max-w-lg">
@@ -111,3 +120,8 @@ export default {
   },
 };
 </script>
+<style>
+.tagStyle {
+  @apply ml-2 px-2 inline-flex text-xs leading-5 font-semibold rounded-full;
+}
+</style>

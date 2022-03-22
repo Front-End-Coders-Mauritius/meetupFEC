@@ -5,10 +5,10 @@
         class="flex justify-between items-center py-7 md:justify-start md:space-x-10"
       >
         <div class="logo-image flex justify-start lg:w-0 lg:flex-1">
-          <router-link to="/">
+          <router-link to="/" class="flex gap-2">
             <span class="sr-only">Workflow</span>
             <span class="text-xl md:text-4xl font-extrabold text-red-700"
-              >MeetupFEC</span
+              >Front-End Coders Mauritius</span
             >
           </router-link>
         </div>
